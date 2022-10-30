@@ -8,9 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		7F3DB9C87DA95299B6529C5D /* Pods_Gallery.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21494DAB921E06C40CF02546 /* Pods_Gallery.framework */; };
+		E968D727290EA2880077F1D5 /* GalleryGenresTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E968D726290EA2880077F1D5 /* GalleryGenresTableCell.swift */; };
+		E968D72A290EA4650077F1D5 /* UITableViewDelegate+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E968D729290EA4650077F1D5 /* UITableViewDelegate+Extensions.swift */; };
+		E968D72C290EA4D20077F1D5 /* UITableViewDataSource+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E968D72B290EA4D20077F1D5 /* UITableViewDataSource+Extensions.swift */; };
 		E9C4B293290E726B00C3C76D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9C4B292290E726B00C3C76D /* AppDelegate.swift */; };
 		E9C4B295290E726B00C3C76D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9C4B294290E726B00C3C76D /* SceneDelegate.swift */; };
-		E9C4B297290E726B00C3C76D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9C4B296290E726B00C3C76D /* ViewController.swift */; };
+		E9C4B297290E726B00C3C76D /* GalleryGenresViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9C4B296290E726B00C3C76D /* GalleryGenresViewController.swift */; };
 		E9C4B29C290E726C00C3C76D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E9C4B29B290E726C00C3C76D /* Assets.xcassets */; };
 		E9C4B29F290E726C00C3C76D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E9C4B29D290E726C00C3C76D /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
@@ -19,10 +22,13 @@
 		21494DAB921E06C40CF02546 /* Pods_Gallery.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Gallery.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		933A0265B9732D0D11666439 /* Pods-Gallery.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gallery.debug.xcconfig"; path = "Target Support Files/Pods-Gallery/Pods-Gallery.debug.xcconfig"; sourceTree = "<group>"; };
 		BD8C1203523074E3652C9905 /* Pods-Gallery.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gallery.release.xcconfig"; path = "Target Support Files/Pods-Gallery/Pods-Gallery.release.xcconfig"; sourceTree = "<group>"; };
+		E968D726290EA2880077F1D5 /* GalleryGenresTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryGenresTableCell.swift; sourceTree = "<group>"; };
+		E968D729290EA4650077F1D5 /* UITableViewDelegate+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewDelegate+Extensions.swift"; sourceTree = "<group>"; };
+		E968D72B290EA4D20077F1D5 /* UITableViewDataSource+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewDataSource+Extensions.swift"; sourceTree = "<group>"; };
 		E9C4B28F290E726B00C3C76D /* Gallery.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Gallery.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9C4B292290E726B00C3C76D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E9C4B294290E726B00C3C76D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		E9C4B296290E726B00C3C76D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		E9C4B296290E726B00C3C76D /* GalleryGenresViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryGenresViewController.swift; sourceTree = "<group>"; };
 		E9C4B29B290E726C00C3C76D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E9C4B29E290E726C00C3C76D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E9C4B2A0290E726C00C3C76D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -48,6 +54,23 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		E968D728290EA2BD0077F1D5 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				E968D729290EA4650077F1D5 /* UITableViewDelegate+Extensions.swift */,
+				E968D72B290EA4D20077F1D5 /* UITableViewDataSource+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		E968D72D290EB2AF0077F1D5 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				E9C4B29B290E726C00C3C76D /* Assets.xcassets */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
 		E9C4B286290E726B00C3C76D = {
 			isa = PBXGroup;
 			children = (
@@ -71,6 +94,7 @@
 			children = (
 				E9C4B2A6290E735400C3C76D /* Applications */,
 				E9C4B2A7290E737000C3C76D /* ViewController */,
+				E968D728290EA2BD0077F1D5 /* Extensions */,
 				E9C4B2A8290E739900C3C76D /* SupportingFiles */,
 			);
 			path = Gallery;
@@ -88,7 +112,8 @@
 		E9C4B2A7290E737000C3C76D /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				E9C4B296290E726B00C3C76D /* ViewController.swift */,
+				E9C4B296290E726B00C3C76D /* GalleryGenresViewController.swift */,
+				E968D726290EA2880077F1D5 /* GalleryGenresTableCell.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -96,8 +121,8 @@
 		E9C4B2A8290E739900C3C76D /* SupportingFiles */ = {
 			isa = PBXGroup;
 			children = (
+				E968D72D290EB2AF0077F1D5 /* Assets */,
 				E9C4B29D290E726C00C3C76D /* LaunchScreen.storyboard */,
-				E9C4B29B290E726C00C3C76D /* Assets.xcassets */,
 				E9C4B2A0290E726C00C3C76D /* Info.plist */,
 			);
 			path = SupportingFiles;
@@ -109,7 +134,6 @@
 				933A0265B9732D0D11666439 /* Pods-Gallery.debug.xcconfig */,
 				BD8C1203523074E3652C9905 /* Pods-Gallery.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -227,9 +251,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E9C4B297290E726B00C3C76D /* ViewController.swift in Sources */,
+				E9C4B297290E726B00C3C76D /* GalleryGenresViewController.swift in Sources */,
 				E9C4B293290E726B00C3C76D /* AppDelegate.swift in Sources */,
 				E9C4B295290E726B00C3C76D /* SceneDelegate.swift in Sources */,
+				E968D727290EA2880077F1D5 /* GalleryGenresTableCell.swift in Sources */,
+				E968D72C290EA4D20077F1D5 /* UITableViewDataSource+Extensions.swift in Sources */,
+				E968D72A290EA4650077F1D5 /* UITableViewDelegate+Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
