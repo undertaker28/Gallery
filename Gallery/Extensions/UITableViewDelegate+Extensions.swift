@@ -26,6 +26,7 @@ extension GalleryGenresViewController: UITableViewDelegate {
             cellTitles.remove(at: indexPath.row)
             imageNames.remove(at: indexPath.row)
             titles.remove(at: indexPath.row)
+            chapters.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .automatic)
         }
     }
