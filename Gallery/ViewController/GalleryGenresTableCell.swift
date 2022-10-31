@@ -14,7 +14,8 @@ class GalleryGenresTableCell: UITableViewCell {
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: "galleryGenresTableCell")
         
-        cellImageView.frame = CGRect(x: 0, y: 0, width: 40, height: 40)
+        cellImageView.frame = CGRect(x: 0, y: 0, width: 46, height: 46)
+        cellImageView.contentMode = .scaleAspectFill
         cellImageView.layer.masksToBounds = true
         cellImageView.layer.cornerRadius = cellImageView.bounds.width / 2
         cellImageView.clipsToBounds = true
@@ -22,13 +23,13 @@ class GalleryGenresTableCell: UITableViewCell {
         contentView.addSubview(cellImageView)
         
         cellLabel.translatesAutoresizingMaskIntoConstraints = false
-        cellLabel.font = UIFont.systemFont(ofSize: 16)
+        cellLabel.font = UIFont.systemFont(ofSize: 18)
         
         contentView.addSubview(cellLabel)
         
         cellImageView.snp.makeConstraints { image in
             image.centerY.equalTo(contentView)
-            image.size.width.height.equalTo(40)
+            image.size.width.height.equalTo(46)
             image.leading.equalTo(contentView).offset(20)
         }
         

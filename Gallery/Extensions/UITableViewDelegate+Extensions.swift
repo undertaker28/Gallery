@@ -14,6 +14,12 @@ extension GalleryGenresViewController: UITableViewDelegate {
         }
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let detailsViewController = GalleryGenresDetailsViewController(collectionViewLayout: UICollectionViewFlowLayout())
+        detailsViewController.index = indexPath.row
+        navigationController?.pushViewController(detailsViewController, animated: true)
+    }
+    
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             cellTitles.remove(at: indexPath.row)

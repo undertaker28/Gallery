@@ -10,26 +10,26 @@ import SnapKit
 
 class GalleryGenresViewController: UIViewController {
     var tableView = UITableView()
-    var cellTitles = ["Animals", "Anime", "Cities", "Flowers", "Food", "Mountains", "Music", "Space", "Sport", "Sunset"]
-    var imageNames = ["SnowLeopard", "Girl", "City", "Rose", "Orange", "Fuji", "HamsterWithHeadphones", "Space", "FCBayern", "Sunset"]
+    var cellTitles = ["Abstraction", "Animals", "Anime", "Cities", "Flowers", "Food", "Mountains", "Space", "Sport", "Sunset"]
+    var imageNames = ["Dragon", "SnowLeopard", "Girl", "City", "Rose", "Orange", "Fuji", "Space", "Snowboarding", "Sunset"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         view.backgroundColor = .white
-
+        
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(GalleryGenresTableCell.self, forCellReuseIdentifier: "galleryGenresTableCell")
         tableView.translatesAutoresizingMaskIntoConstraints = false
-        tableView.rowHeight = 60
+        tableView.rowHeight = 66
 
         view.addSubview(tableView)
 
-        tableView.snp.makeConstraints { make in
-            make.top.equalTo(view.safeAreaLayoutGuide.snp.top)
-            make.size.height.equalTo(60)
-            make.size.width.equalToSuperview()
+        tableView.snp.makeConstraints { tableView in
+            tableView.top.equalTo(view.safeAreaLayoutGuide.snp.top)
+            tableView.size.height.equalTo(66)
+            tableView.size.width.equalToSuperview()
         }
         
         navigationController?.navigationBar.prefersLargeTitles = true
