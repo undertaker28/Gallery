@@ -10,8 +10,6 @@ import UIKit
 class GalleryGenresDetailsViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
     let titleInCellId = "titleInCellId"
     var index: Int = 0
-    var titles = ["Abstraction", "Animals", "Anime", "Cities", "Flowers", "Food", "Mountains", "Space", "Sport", "Sunset"]
-    
     var genres: [Category]?
     
     override func viewDidLoad() {
