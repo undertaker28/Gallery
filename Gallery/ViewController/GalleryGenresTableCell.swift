@@ -27,6 +27,14 @@ class GalleryGenresTableCell: UITableViewCell {
         
         contentView.addSubview(cellLabel)
         
+        makeConstraints()
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    func makeConstraints() {
         cellImageView.snp.makeConstraints { image in
             image.centerY.equalTo(contentView)
             image.size.width.height.equalTo(46)
@@ -37,9 +45,5 @@ class GalleryGenresTableCell: UITableViewCell {
             label.centerY.equalTo(contentView)
             label.leading.equalTo(cellImageView.snp.trailing).offset(10)
         }
-    }
-        
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
     }
 }

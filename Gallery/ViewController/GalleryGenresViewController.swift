@@ -25,15 +25,19 @@ class GalleryGenresViewController: UIViewController {
         tableView.rowHeight = 66
 
         view.addSubview(tableView)
-
+        
+        navigationController?.navigationBar.prefersLargeTitles = true
+        title = "Genres"
+        tableView.tableHeaderView = UIView()
+        
+        makeConstraints()
+    }
+    
+    func makeConstraints() {
         tableView.snp.makeConstraints { tableView in
             tableView.top.equalTo(view.safeAreaLayoutGuide.snp.top)
             tableView.size.height.equalTo(66)
             tableView.size.width.equalToSuperview()
         }
-        
-        navigationController?.navigationBar.prefersLargeTitles = true
-        title = "Genres"
-        tableView.tableHeaderView = UIView()
     }
 }

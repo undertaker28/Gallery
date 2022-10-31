@@ -14,6 +14,7 @@ extension GalleryGenresViewController: UITableViewDelegate {
         }
     }
     
+    // MARK: - Going on tap to GalleryGenresDetailsViewController
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let detailsViewController = GalleryGenresDetailsViewController(collectionViewLayout: UICollectionViewFlowLayout())
         detailsViewController.index = indexPath.row

@@ -16,7 +16,7 @@ extension GalleryGenresDetailsCategoryCell: UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: imageInCellId, for: indexPath) as! GenreCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: imageInCellId, for: indexPath) as! CellWithImages
         cell.cellImage = genre?.imageNames?[indexPath.item]
         return cell
     }

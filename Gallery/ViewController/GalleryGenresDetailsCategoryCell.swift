@@ -43,20 +43,23 @@ class GalleryGenresDetailsCategoryCell: UICollectionViewCell, UICollectionViewDe
     override init(frame: CGRect) {
         super.init(frame: frame)
         
-        addSubview(sectionCollectionView)
         sectionCollectionView.dataSource = self
         sectionCollectionView.delegate = self
-        sectionCollectionView.register(GenreCell.self, forCellWithReuseIdentifier: imageInCellId)
+        sectionCollectionView.register(CellWithImages.self, forCellWithReuseIdentifier: imageInCellId)
         
+        addSubview(sectionCollectionView)
+        addSubview(sectionLabel)
+        
+        makeConstraints()
+    }
+    
+    func makeConstraints() {
         sectionCollectionView.snp.makeConstraints { collectionView in
             collectionView.leading.equalToSuperview()
             collectionView.trailing.equalToSuperview().offset(-16)
             collectionView.top.equalToSuperview().offset(50)
             collectionView.bottom.equalToSuperview()
         }
-        
-        addSubview(sectionLabel)
-        
         sectionLabel.snp.makeConstraints { label in
             label.leading.equalTo(sectionCollectionView).offset(16)
             label.trailing.equalTo(sectionCollectionView).offset(-16)
@@ -69,7 +72,7 @@ class GalleryGenresDetailsCategoryCell: UICollectionViewCell, UICollectionViewDe
     }
 }
 
-class GenreCell: UICollectionViewCell {
+class CellWithImages: UICollectionViewCell {
     var cellImage: ImageName? {
         didSet {
             if let imageName = cellImage?.imageName {
@@ -79,26 +82,32 @@ class GenreCell: UICollectionViewCell {
     }
     
     let photoImageView: UIImageView = {
-        let iv = UIImageView()
-        iv.contentMode = .scaleToFill
-        iv.clipsToBounds = true
-        iv.layer.cornerRadius = 15
-        iv.layer.masksToBounds = true
-        iv.translatesAutoresizingMaskIntoConstraints = false
-        return iv
+        let imageView = UIImageView()
+        imageView.contentMode = .scaleToFill
+        imageView.clipsToBounds = true
+        imageView.layer.cornerRadius = 15
+        imageView.layer.masksToBounds = true
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+        return imageView
     }()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
         
         addSubview(photoImageView)
-        photoImageView.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 16).isActive = true
-        photoImageView.rightAnchor.constraint(equalTo: self.rightAnchor, constant: 0).isActive = true
-        photoImageView.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: 0).isActive = true
-        photoImageView.topAnchor.constraint(equalTo: self.topAnchor, constant: 0).isActive = true
+        makeConstraints()
     }
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    func makeConstraints() {
+        photoImageView.snp.makeConstraints { imageView in
+            imageView.leading.equalToSuperview().offset(16)
+            imageView.trailing.equalToSuperview()
+            imageView.bottom.equalToSuperview()
+            imageView.top.equalToSuperview()
+        }
     }
 }
